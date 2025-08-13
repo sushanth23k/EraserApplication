@@ -6,7 +6,7 @@ from typing import List, Optional, Dict, Any, Tuple
 from PIL import Image
 
 from config import config
-from models import Coordinate
+from models import Coordinate, Region
 from services.logging_service import logging_service
 from utils.image_utils import image_utils
 
@@ -48,11 +48,21 @@ class AIService:
             logging_service.log_error("Mask creation", str(e))
             raise ValueError(f"Failed to create mask: {str(e)}")
 
-    async def remove_object(self, image_base64: str, coordinates: List[Coordinate], 
+    def _create_mask_from_regions(self, image_size: Tuple[int, int], regions: List[Region]) -> str:
+        """Create a mask image from rectangular regions and return as base64 data URI."""
+        try:
+            mask_base64 = image_utils.create_mask_base64_from_regions(image_size, regions)
+            return f"data:image/png;base64,{mask_base64}"
+        except Exception as e:
+            logging_service.log_error("Mask creation from regions", str(e))
+            raise ValueError(f"Failed to create mask from regions: {str(e)}")
+
+    async def remove_object(self, image_base64: str, coordinates: Optional[List[Coordinate]] = None,
                           description: str = "",
                           num_inference_steps: int = 50,
                           guidance_scale: float = 7.5,
-                          seed: Optional[int] = None) -> Dict[str, Any]:
+                          seed: Optional[int] = None,
+                          regions: Optional[List[Region]] = None) -> Dict[str, Any]:
         """
         Use Replicate's zylim0702/remove-object model to remove objects from the image.
         
@@ -82,8 +92,19 @@ class AIService:
             # Prepare original image for API
             input_image = self._prepare_image_for_api(image_base64)
             
-            # Create mask from coordinates
-            mask_image = self._create_mask_from_coordinates(image_size, coordinates)
+            # Create mask: prefer regions if provided, else coordinates
+            if regions and len(regions) > 0:
+                mask_image = self._create_mask_from_regions(image_size, regions)
+                mask_source = f"{len(regions)} regions"
+            else:
+                if not coordinates or len(coordinates) < 3:
+                    return {
+                        "success": False,
+                        "error": "Insufficient coordinates to create mask",
+                        "processing_time": 0
+                    }
+                mask_image = self._create_mask_from_coordinates(image_size, coordinates)
+                mask_source = f"{len(coordinates)} coordinate points"
             
             # Prepare input for Replicate API (bria/eraser)
             input_data = {
@@ -95,7 +116,7 @@ class AIService:
                 "seed": seed,
             }
             
-            logging_service.log_info(f"Starting Replicate object removal with mask-based approach using {len(coordinates)} coordinate points")
+            logging_service.log_info(f"Starting Replicate object removal with mask-based approach using {mask_source}")
             
             # Create a new Replicate client with the API token
             client = replicate.Client(api_token=self.api_key)
@@ -158,7 +179,7 @@ class AIService:
                 "processed_image": processed_image_data_uri,
                 "processing_time": processing_time,
                 "model_used": self.model,
-                "coordinates_analyzed": len(coordinates),
+                "coordinates_analyzed": len(coordinates) if coordinates else 0,
                 "mask_generated": True,
                 "image_dimensions": f"{image_size[0]}x{image_size[1]}"
             }

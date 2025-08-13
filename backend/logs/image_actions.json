@@ -6469,5 +6469,22 @@
       "mode": "RGB",
       "file_size": 0
     }
+  },
+  {
+    "id": "0d67c123-3e9f-47bc-921f-354ed8071a6b",
+    "action_type": "upload",
+    "image_id": "a00cf4cd-4c11-4bfc-b11e-f8368e40133a",
+    "coordinates": null,
+    "description": null,
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+    "ip_address": "127.0.0.1",
+    "timestamp": "2025-08-13T00:28:51.980431",
+    "metadata": {
+      "width": 625,
+      "height": 417,
+      "format": "Unknown",
+      "mode": "RGB",
+      "file_size": 0
+    }
   }
 ]

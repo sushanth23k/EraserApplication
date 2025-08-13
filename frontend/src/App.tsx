@@ -5,7 +5,8 @@ import {
   Shape, 
   DrawingTool, 
   ProcessedResult,
-  Coordinate 
+  Coordinate,
+  Region
 } from './types';
 import { apiService, fileToDataUrl, validateImageFile, downloadBlob } from './services/api';
 import ImageUpload from './components/ImageUpload';
@@ -116,6 +117,26 @@ function App() {
     setCurrentTool(DrawingTool.NONE);
   }, []);
 
+  // Convert completed shapes to rectangular regions for cumulative masking
+  const shapesToRegions = useCallback((allShapes: Shape[]): Region[] => {
+    const regions: Region[] = [];
+    for (const shape of allShapes) {
+      if (!shape.isComplete || shape.coordinates.length < 2) continue;
+      const xs = shape.coordinates.map(p => p.x);
+      const ys = shape.coordinates.map(p => p.y);
+      const minX = Math.floor(Math.max(0, Math.min(...xs)));
+      const minY = Math.floor(Math.max(0, Math.min(...ys)));
+      const maxX = Math.ceil(Math.max(...xs));
+      const maxY = Math.ceil(Math.max(...ys));
+      const width = Math.max(0, maxX - minX);
+      const height = Math.max(0, maxY - minY);
+      if (width > 0 && height > 0) {
+        regions.push({ x: minX, y: minY, width, height });
+      }
+    }
+    return regions;
+  }, []);
+
   // Process image with AI
   const handleProcess = useCallback(async () => {
     if (!currentImage || shapes.length === 0) return;
@@ -124,7 +145,9 @@ function App() {
     setError(null);
 
     try {
-      // Get the primary shape coordinates (for now, use the first shape)
+      // Use all shapes to build cumulative rectangular regions
+      const regions = shapesToRegions(shapes);
+      // Fallback coordinates for backward compatibility (first shape polygon)
       const primaryShape = shapes[0];
       
       const response = await apiService.processImage(
@@ -135,6 +158,7 @@ function App() {
           num_inference_steps: numInferenceSteps,
           guidance_scale: guidanceScale,
           seed: seed,
+          regions: regions,
         }
       );
 
@@ -143,7 +167,8 @@ function App() {
           originalImage: currentImage.dataUrl,
           processedImage: response.processed_image,
           coordinates: primaryShape.coordinates,
-          description: objectPrompt
+          description: objectPrompt,
+          regions: regions
         };
 
         setProcessedResult(result);

@@ -70,8 +70,8 @@ def process_image():
         data = request.get_json()
         client_info = get_client_info()
         
-        # Validate required fields
-        required_fields = ['image', 'coordinates']
+        # Validate required fields (image is required; coordinates or regions will be validated later)
+        required_fields = ['image']
         for field in required_fields:
             if field not in data:
                 logging_service.log_warning(f"Processing attempt missing {field}", client_info)
@@ -79,7 +79,8 @@ def process_image():
         
         # Extract data
         image_data = data['image']
-        coordinates = data['coordinates']
+        coordinates = data.get('coordinates') or []
+        regions = data.get('regions') or []
         description = data.get('prompt', '') or data.get('description', '')
         num_inference_steps = int(data.get('num_inference_steps', 50))
         guidance_scale = float(data.get('guidance_scale', 7.5))
@@ -89,13 +90,14 @@ def process_image():
         except Exception:
             seed = None
         
-        # Validate coordinates
-        if not coordinates or len(coordinates) < 3:
-            logging_service.log_warning("Processing attempt with insufficient coordinates", {
+        # Validate inputs: require regions or sufficient coordinates
+        if (not regions or len(regions) == 0) and (not coordinates or len(coordinates) < 3):
+            logging_service.log_warning("Processing attempt without regions and insufficient coordinates", {
                 **client_info,
-                "coordinate_count": len(coordinates) if coordinates else 0
+                "coordinate_count": len(coordinates) if coordinates else 0,
+                "regions_count": len(regions) if regions else 0
             })
-            return jsonify({"error": "At least 3 coordinate points required"}), 400
+            return jsonify({"error": "Provide regions or at least 3 coordinate points"}), 400
         
         # Process image using asyncio to handle the async method
         loop = asyncio.new_event_loop()
@@ -110,7 +112,8 @@ def process_image():
                     ip_address=client_info['ip_address'],
                     num_inference_steps=num_inference_steps,
                     guidance_scale=guidance_scale,
-                    seed=seed
+                    seed=seed,
+                    regions_data=regions
                 )
             )
         finally:

@@ -10,6 +10,14 @@ class Coordinate:
     y: float
 
 @dataclass
+class Region:
+    """Axis-aligned rectangular region specified by top-left x,y and width,height."""
+    x: int
+    y: int
+    width: int
+    height: int
+
+@dataclass
 class ImageMetadata:
     """Represents image metadata."""
     width: int

@@ -1,4 +1,4 @@
-import { UploadResponse, ProcessResponse, Coordinate } from '../types';
+import { UploadResponse, ProcessResponse, Coordinate, Region } from '../types';
 
 const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5001';
 
@@ -61,12 +61,13 @@ class ApiService {
   async processImage(
     imageDataUrl: string,
     coordinates: Coordinate[],
-    options?: { prompt?: string; num_inference_steps?: number; guidance_scale?: number; seed?: string | number }
+    options?: { prompt?: string; num_inference_steps?: number; guidance_scale?: number; seed?: string | number; regions?: Region[] }
   ): Promise<ProcessResponse> {
     const payload: Record<string, any> = {
       image: imageDataUrl,
       coordinates,
     };
+    if (options?.regions && options.regions.length > 0) payload.regions = options.regions;
     if (options?.prompt !== undefined) payload.prompt = options.prompt;
     if (options?.num_inference_steps !== undefined) payload.num_inference_steps = options.num_inference_steps;
     if (options?.guidance_scale !== undefined) payload.guidance_scale = options.guidance_scale;

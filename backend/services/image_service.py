@@ -3,7 +3,7 @@ import uuid
 from typing import List, Dict, Any, Optional, Tuple
 from PIL import Image
 
-from models import Coordinate, ImageMetadata, ProcessingRequest, ProcessingResult
+from models import Coordinate, ImageMetadata, ProcessingRequest, ProcessingResult, Region
 from services.logging_service import logging_service
 from services.ai_service import ai_service
 from utils.image_utils import image_utils
@@ -65,7 +65,8 @@ class ImageService:
                                    ip_address: str = None,
                                    num_inference_steps: int = 50,
                                    guidance_scale: float = 7.5,
-                                   seed: Optional[int] = None) -> Dict[str, Any]:
+                                   seed: Optional[int] = None,
+                                   regions_data: Optional[List[Dict]] = None) -> Dict[str, Any]:
         """Process image for object removal using Replicate's bria/eraser model."""
         start_time = time.time()
         request_id = str(uuid.uuid4())
@@ -75,11 +76,19 @@ class ImageService:
             if not image_data:
                 raise ValueError("No image data provided")
             
-            if not coordinates_data or len(coordinates_data) < 3:
-                raise ValueError("At least 3 coordinate points required")
+            # Regions or coordinates are required
+            if (not regions_data or len(regions_data) == 0) and (not coordinates_data or len(coordinates_data) < 3):
+                raise ValueError("Provide regions or at least 3 coordinate points")
             
             # Convert coordinates
-            coordinates = [Coordinate(x=coord['x'], y=coord['y']) for coord in coordinates_data]
+            coordinates = [Coordinate(x=coord['x'], y=coord['y']) for coord in coordinates_data] if coordinates_data else []
+            regions: List[Region] = []
+            if regions_data:
+                for r in regions_data:
+                    try:
+                        regions.append(Region(x=int(r['x']), y=int(r['y']), width=int(r['width']), height=int(r['height'])))
+                    except Exception:
+                        continue
             
             # Decode image for metadata
             image = image_utils.decode_base64_image(image_data)
@@ -98,11 +107,12 @@ class ImageService:
             # Use Replicate AI for object removal
             ai_result = await ai_service.remove_object(
                 image_data,
-                coordinates,
-                description,
-                num_inference_steps,
-                guidance_scale,
-                seed,
+                coordinates=coordinates,
+                description=description,
+                num_inference_steps=num_inference_steps,
+                guidance_scale=guidance_scale,
+                seed=seed,
+                regions=regions if len(regions) > 0 else None,
             )
             
             # Calculate processing time

@@ -22,6 +22,7 @@ export interface ProcessedResult {
   processedImage: string;
   coordinates: Coordinate[];
   description?: string;
+  regions?: Region[];
 }
 
 // Drawing tools and shapes
@@ -41,6 +42,13 @@ export interface Shape {
 }
 
 export interface Rectangle {
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+}
+
+export interface Region {
   x: number;
   y: number;
   width: number;

@@ -4,7 +4,7 @@ from typing import Tuple, List
 from PIL import Image, ImageDraw
 
 from config import config
-from models import Coordinate, ImageMetadata
+from models import Coordinate, ImageMetadata, Region
 from services.logging_service import logging_service
 
 class ImageUtils:
@@ -104,6 +104,37 @@ class ImageUtils:
         except Exception as e:
             logging_service.log_error("Mask base64 creation", str(e))
             raise ValueError(f"Failed to create mask: {str(e)}")
+
+    @staticmethod
+    def create_mask_from_regions(image_size: Tuple[int, int], regions: List[Region]) -> Image.Image:
+        """Create a binary mask from multiple rectangular regions (pixel-wise OR)."""
+        try:
+            width, height = image_size
+            mask = Image.new('RGB', (width, height), (0, 0, 0))
+            draw = ImageDraw.Draw(mask)
+            for region in regions:
+                if region.width <= 0 or region.height <= 0:
+                    continue
+                x1 = int(max(0, region.x))
+                y1 = int(max(0, region.y))
+                x2 = int(min(width, region.x + region.width))
+                y2 = int(min(height, region.y + region.height))
+                if x2 > x1 and y2 > y1:
+                    draw.rectangle([x1, y1, x2, y2], fill=(255, 255, 255))
+            return mask
+        except Exception as e:
+            logging_service.log_error("Mask creation from regions", str(e))
+            return Image.new('RGB', image_size, (0, 0, 0))
+
+    @staticmethod
+    def create_mask_base64_from_regions(image_size: Tuple[int, int], regions: List[Region]) -> str:
+        """Create a binary mask from rectangular regions and return as base64 string."""
+        try:
+            mask = ImageUtils.create_mask_from_regions(image_size, regions)
+            return ImageUtils.encode_image_to_base64(mask)
+        except Exception as e:
+            logging_service.log_error("Mask base64 creation from regions", str(e))
+            raise ValueError(f"Failed to create mask from regions: {str(e)}")
 
 # Export singleton instance
 image_utils = ImageUtils() 
