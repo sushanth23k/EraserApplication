@@ -9,7 +9,7 @@ A full-stack web application for AI-powered image editing that allows users to r
   - Freehand drawing for irregular shapes
   - Rectangle selector with drag/resize capabilities
   - Ellipse selector with drag/resize capabilities
-- **AI-Powered Object Removal**: Uses Groq API with LLaMA model for intelligent object removal
+- **AI-Powered Object Removal**: Uses Replicate API with bria/eraser model for intelligent object removal
 - **Real-time Preview**: Zoomable/pannable viewport maintaining original resolution
 - **Side-by-Side Comparison**: Original vs. edited image comparison view
 - **High-Quality Downloads**: Preserve original image format and quality
@@ -19,9 +19,16 @@ A full-stack web application for AI-powered image editing that allows users to r
 
 - **Frontend**: React 18 + TypeScript
 - **Backend**: Flask + Python
-- **AI Integration**: Groq API (meta-llama/llama-4-scout-17b-16e-instruct)
+- **AI Integration**: Replicate API (bria/eraser)
 - **Styling**: Modern CSS with custom design system
 - **Image Processing**: PIL (Pillow) + NumPy + SciPy
+
+## Model Information
+
+The AI Image Editor utilizes the bria/eraser model for object removal tasks. This model is hosted on Replicate, a platform for running machine learning models in the cloud. You can find more information about the model and its capabilities at the following URL:
+
+[Bria/Eraser Model on Replicate](https://replicate.com/bria/eraser)
+
 
 ## Quick Start
 
@@ -29,7 +36,7 @@ A full-stack web application for AI-powered image editing that allows users to r
 
 - Python 3.8+
 - Node.js 16+
-- Groq API key
+- Replicate API key
 
 ### 1. Clone Repository
 
@@ -38,52 +45,30 @@ git clone <repository-url>
 cd EraserApplication
 ```
 
-### 2. Backend Setup
+### 2. Setup (one-time)
 
 ```bash
-# Navigate to backend directory
-cd backend
-
-# Create virtual environment
-python -m venv venv
-
-# Activate virtual environment
-# On Windows:
-venv\Scripts\activate
-# On macOS/Linux:
-source venv/bin/activate
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Set environment variables
-# Create .env file in project root:
-echo "GROQ_API_KEY=your_groq_api_key_here" > ../.env
-
-# Run Flask server
-python app.py
+# From project root
+./setup.sh
 ```
 
-Backend will be available at `http://localhost:5000`
+What it does:
+- Creates `.env` with defaults (edit `REPLICATE_API_KEY` later)
+- Installs backend Python packages into `backend/venv`
+- Installs frontend packages in `frontend`
 
-### 3. Frontend Setup
+### 3. Start (every time)
 
 ```bash
-# Navigate to frontend directory (in a new terminal)
-cd frontend
-
-# Install dependencies
-npm install
-
-# Start development server
-npm start
+# From project root
+./start.sh
 ```
 
-Frontend will be available at `http://localhost:3000`
+Frontend will be available at `http://localhost:3000` and backend at `http://localhost:5001`.
 
 ## API Endpoints
 
-### Backend API (`http://localhost:5000`)
+### Backend API (`http://localhost:5001`)
 
 - `GET /api/health` - Health check
 - `POST /api/upload` - Validate and process image upload
@@ -107,20 +92,26 @@ Frontend will be available at `http://localhost:3000`
 Create a `.env` file in the project root:
 
 ```env
-# Groq API Configuration
-GROQ_API_KEY=your_groq_api_key_here
+# Replicate API Configuration
+REPLICATE_API_KEY=your_replicate_api_key_here
 
 # Backend Configuration
 FLASK_ENV=development
+FLASK_HOST=0.0.0.0
+FLASK_PORT=5001
 FLASK_DEBUG=true
 
 # Frontend Configuration
-REACT_APP_API_URL=http://localhost:5000
+REACT_APP_API_URL=http://localhost:5001
+
+# Log Configuration
+LOG_LEVEL=INFO
+LOG_FILE=logs/app.log
 ```
 
-### Groq API Setup
+### Replicate API Setup
 
-1. Sign up at [Groq Console](https://console.groq.com/)
+1. Sign up at [Replicate Console](https://console.groq.com/)
 2. Create an API key
 3. Add the key to your `.env` file
 
@@ -150,9 +141,9 @@ EraserApplication/
 
 ### Running in Development Mode
 
-1. Start backend: `cd backend && python app.py`
+1. Start backend: `cd backend && source venv/bin/activate && python app.py` (runs on port 5001)
 2. Start frontend: `cd frontend && npm start`
-3. Both servers support hot reloading
+3. Or run both with `./start.sh`
 
 ### Building for Production
 
@@ -174,7 +165,7 @@ npm run build
 - Text: `#2d3748` (dark gray)
 
 ### Layout
-- **Desktop**: 3-column layout (Toolbar | Canvas | Processing Panel)
+- **Desktop**: 3-column layout (Toolbar | Canvas | Config Panel | Result Section)
 - **Mobile**: Vertical stacking
 - **Typography**: System fonts (San Francisco, Segoe UI, Roboto)
 
@@ -182,8 +173,8 @@ npm run build
 
 ### Common Issues
 
-1. **CORS Errors**: Ensure backend is running on port 5000
-2. **Groq API Errors**: Check API key and quota limits
+1. **CORS Errors**: Ensure backend is running on port 5001
+2. **Replicate API Errors**: Check API key and quota limits
 3. **Upload Issues**: Verify file size (max 10MB) and format (JPG/PNG)
 4. **Processing Failures**: Check backend logs for detailed error messages
 
@@ -191,7 +182,7 @@ npm run build
 
 ```bash
 # Check backend health
-curl http://localhost:5000/api/health
+curl http://localhost:5001/api/health
 
 # View backend logs
 cd backend
@@ -226,7 +217,7 @@ This project is for educational/demo purposes. Please check individual service t
 For issues or questions:
 1. Check the troubleshooting section
 2. Review API documentation
-3. Check Groq API status and limits
+3. Check Replicate API status and limits
 4. Open an issue with detailed error logs
 
 ## Delete the extra files

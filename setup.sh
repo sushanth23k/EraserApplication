@@ -4,91 +4,64 @@ echo "🛠️  AI Image Editor Setup"
 echo "=========================="
 echo ""
 
-# Check if .env file exists
-if [ -f ".env" ]; then
-    echo "✅ .env file already exists"
-    echo "Current configuration:"
-    cat .env | grep -v "^#" | grep "="
-    echo ""
-    read -p "Do you want to update it? (y/N): " update_env
-    if [[ $update_env != "y" && $update_env != "Y" ]]; then
-        echo "Skipping .env configuration"
-        echo ""
-    else
-        rm .env
-    fi
-fi
-
-# Create .env file if it doesn't exist or user wants to update
+# Create or update .env minimally (non-interactive)
 if [ ! -f ".env" ]; then
-    echo "📝 Setting up environment variables..."
-    echo ""
-    
-    # Get Replicate API key
-    echo "You need a Replicate API key to use this application."
-    echo "Get one from: https://replicate.com/account/api-tokens"
-    echo ""
-    read -p "Enter your Replicate API key: " replicate_key
-    
-    if [ -z "$replicate_key" ]; then
-        echo "⚠️  Warning: No API key provided. You can add it later to .env file"
-        replicate_key="your_replicate_api_key_here"
-    fi
-    
-    # Create .env file
+    echo "Creating default .env file..."
     cat > .env << EOF
 # Replicate API Configuration
-REPLICATE_API_KEY=$replicate_key
+REPLICATE_API_KEY=your_replicate_api_key_here
 
 # Backend Configuration
 FLASK_ENV=development
 FLASK_DEBUG=true
+FLASK_HOST=0.0.0.0
+FLASK_PORT=5001
 
 # Frontend Configuration
-REACT_APP_API_URL=http://localhost:5000
+REACT_APP_API_URL=http://localhost:5001
 EOF
-    
-    echo "✅ Created .env file"
-    echo ""
+    echo "✅ Created .env (update REPLICATE_API_KEY later)"
+else
+    echo "✅ Using existing .env"
 fi
 
-# Check Python
+# Check required tooling
 echo "🐍 Checking Python installation..."
-if command -v python3 &> /dev/null; then
-    python_version=$(python3 --version 2>&1)
-    echo "✅ Found: $python_version"
-else
+if ! command -v python3 &> /dev/null; then
     echo "❌ Python 3 not found. Please install Python 3.8 or higher"
-    echo "Download from: https://www.python.org/downloads/"
     exit 1
 fi
+python3 --version
 
-# Check Node.js
 echo "📦 Checking Node.js installation..."
-if command -v node &> /dev/null; then
-    node_version=$(node --version 2>&1)
-    echo "✅ Found: Node.js $node_version"
-else
+if ! command -v node &> /dev/null; then
     echo "❌ Node.js not found. Please install Node.js 16 or higher"
-    echo "Download from: https://nodejs.org/"
     exit 1
 fi
+node --version
 
-# Check npm
-if command -v npm &> /dev/null; then
-    npm_version=$(npm --version 2>&1)
-    echo "✅ Found: npm $npm_version"
-else
+if ! command -v npm &> /dev/null; then
     echo "❌ npm not found. Please install npm"
     exit 1
 fi
+npm --version
 
-echo ""
-echo "🎉 Setup complete!"
-echo ""
-echo "Next steps:"
-echo "1. Run ./start.sh (Linux/Mac) or start.bat (Windows)"
-echo "2. Open http://localhost:3000 in your browser"
-echo ""
-echo "If you need to add your Replicate API key later:"
-echo "Edit the .env file and replace 'your_replicate_api_key_here' with your actual key" 
+# Install backend dependencies
+echo "\n📁 Installing backend dependencies..."
+cd backend || { echo "Backend directory not found"; exit 1; }
+if [ ! -d "venv" ]; then
+    python3 -m venv venv || { echo "Failed to create virtualenv"; exit 1; }
+fi
+# shellcheck disable=SC1091
+source venv/bin/activate
+python3 -m pip install --upgrade pip setuptools wheel
+pip install -r requirements.txt || { echo "Failed to install backend dependencies"; exit 1; }
+deactivate
+
+# Install frontend dependencies
+echo "\n📁 Installing frontend dependencies..."
+cd ../frontend || { echo "Frontend directory not found"; exit 1; }
+npm install || { echo "Failed to install frontend dependencies"; exit 1; }
+
+echo "\n🎉 Setup complete!"
+echo "Next: run ./start.sh to launch the app."

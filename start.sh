@@ -14,8 +14,8 @@ check_port() {
 
 # Kill any existing processes on our ports
 echo "🧹 Cleaning up existing processes..."
-if check_port 5000; then
-    echo "Stopping process on port 5000..."
+if check_port 5001; then
+    echo "Stopping process on port 5001..."
     pkill -f "python.*app.py" 2>/dev/null || true
 fi
 
@@ -27,36 +27,18 @@ fi
 
 sleep 2
 
-# Start backend
+# Start backend (no installs)
 echo "🐍 Starting Flask backend..."
 cd backend
 
-# Remove existing virtual environment
-echo "Cleaning up Python environment..."
-rm -rf venv
-rm -f .deps_installed
-
-# Create fresh virtual environment
-echo "Creating Python virtual environment..."
-python3 -m venv venv
-
-# Activate virtual environment
-source venv/bin/activate
-
-# Upgrade pip
-echo "Upgrading pip..."
-python3 -m pip install --upgrade pip setuptools wheel
-
-# Install dependencies
-echo "Installing Python dependencies..."
-pip install -r requirements.txt || {
-    echo "❌ Failed to install Python dependencies"
-    exit 1
-}
-touch .deps_installed
+# Activate virtual environment if present
+if [ -d "venv" ]; then
+    # shellcheck disable=SC1091
+    source venv/bin/activate
+fi
 
 # Start Flask server in background
-echo "Starting Flask server on http://localhost:5000"
+echo "Starting Flask server on http://localhost:5001"
 python app.py &
 BACKEND_PID=$!
 
@@ -65,32 +47,16 @@ echo "Waiting for backend to start..."
 sleep 5
 
 # Check if backend started successfully
-if ! check_port 5000; then
+if ! check_port 5001; then
     echo "❌ Failed to start backend server"
     exit 1
 fi
 
 echo "✅ Backend started successfully"
 
-# Start frontend
+# Start frontend (no installs)
 echo "⚛️  Starting React frontend..."
 cd ../frontend
-
-# Clean up existing installation
-echo "Cleaning up Node.js environment..."
-rm -rf node_modules package-lock.json
-
-# Clear npm cache
-echo "Clearing npm cache..."
-npm cache clean --force
-
-# Install dependencies
-echo "Installing Node.js dependencies..."
-npm install --legacy-peer-deps || {
-    echo "❌ Failed to install Node.js dependencies"
-    kill $BACKEND_PID 2>/dev/null
-    exit 1
-}
 
 # Start React development server with OpenSSL legacy provider
 echo "Starting React server on http://localhost:3000"
@@ -113,8 +79,14 @@ echo "✅ Frontend started successfully"
 echo ""
 echo "🎉 AI Image Editor is now running!"
 echo "Frontend: http://localhost:3000"
-echo "Backend:  http://localhost:5000"
+echo "Backend:  http://localhost:5001"
 echo ""
+echo "Opening frontend in your default browser..."
+if command -v open >/dev/null 2>&1; then
+    open http://localhost:3000
+elif command -v xdg-open >/dev/null 2>&1; then
+    xdg-open http://localhost:3000 >/dev/null 2>&1 &
+fi
 echo "Press Ctrl+C to stop both servers"
 
 # Function to cleanup on exit

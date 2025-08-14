@@ -243,7 +243,7 @@ function App() {
   return (
     <div className="app">
       <header className="app-header">
-        <h1 className="app-title">AI Image Editor</h1>
+        <h1 className="app-title">AI Eraser</h1>
       </header>
 
       <main className="app-main three-col" style={{ position: 'relative' }}>

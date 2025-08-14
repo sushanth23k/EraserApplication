@@ -6486,5 +6486,39 @@
       "mode": "RGB",
       "file_size": 0
     }
+  },
+  {
+    "id": "56f5782e-4e56-498c-8ddd-37fffa270d2a",
+    "action_type": "upload",
+    "image_id": "20222aef-c374-4ba5-82e8-dcb014261a37",
+    "coordinates": null,
+    "description": null,
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+    "ip_address": "127.0.0.1",
+    "timestamp": "2025-08-13T23:28:28.548237",
+    "metadata": {
+      "width": 625,
+      "height": 417,
+      "format": "Unknown",
+      "mode": "RGB",
+      "file_size": 0
+    }
+  },
+  {
+    "id": "f4d94990-3d5c-49ce-9101-5a63f48ab1b7",
+    "action_type": "upload",
+    "image_id": "72cc9b4b-decb-4fea-8e8f-02432e39a191",
+    "coordinates": null,
+    "description": null,
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+    "ip_address": "127.0.0.1",
+    "timestamp": "2025-08-13T23:39:42.632304",
+    "metadata": {
+      "width": 2774,
+      "height": 3222,
+      "format": "Unknown",
+      "mode": "RGB",
+      "file_size": 0
+    }
   }
 ]

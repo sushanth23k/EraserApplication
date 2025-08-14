@@ -21,18 +21,18 @@ const ProcessingPanel: React.FC<ProcessingPanelProps> = ({
       <div className="processing-section">
         <div className="section-title">
           <span className="title-icon">🎯</span>
-          Prompt (optional)
+          Prompt
         </div>
         <input
           type="text"
           className="text-input"
-          placeholder="Describe the object to remove (optional)"
+          placeholder="Describe the object to remove"
           value={objectPrompt}
           onChange={(e) => onObjectPromptChange(e.target.value)}
           disabled={isProcessing}
         />
         <div className="field-row" style={{ marginTop: '0.75rem' }}>
-          <label className="field-label">Clarity (Steps)</label>
+          <label className="field-label"> Steps </label> <span className="field-label-subtext">(Represents Clarity)</span>
           <input
             type="number"
             className="text-input"
@@ -45,7 +45,7 @@ const ProcessingPanel: React.FC<ProcessingPanelProps> = ({
           />
         </div>
         <div className="field-row">
-          <label className="field-label">Guidance</label>
+          <label className="field-label">Guidance </label> <span className="field-label-subtext">(Represents Prompt Strength)</span>
           <input
             type="number"
             className="text-input"
@@ -58,7 +58,7 @@ const ProcessingPanel: React.FC<ProcessingPanelProps> = ({
           />
         </div>
         <div className="field-row">
-          <label className="field-label">Seed (optional)</label>
+          <label className="field-label">Seed </label> <span className="field-label-subtext">(Represents Reproducibility, Optional)</span>
           <div style={{ display: 'flex', gap: '0.5rem' }}>
             <input
               type="text"

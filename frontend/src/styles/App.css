@@ -116,12 +116,12 @@ body {
 /* Floating transfer button */
 .transfer-button {
   position: absolute;
-  top: -8px;
-  left: 50%;
+  top: -5px;
+  left: 50.5%;
   transform: translateX(-50%);
   z-index: 20;
-  width: 36px;
-  height: 36px;
+  width: 80px;
+  height: 40px;
   border-radius: 9999px;
   background: var(--primary);
   color: var(--primary-contrast);
@@ -354,7 +354,7 @@ body {
   padding: 1rem;
   border: 2px solid var(--gray-200);
   border-radius: var(--radius-lg);
-  font-size: 0.875rem;
+  font-size: 1.0rem;
   color: var(--gray-700);
   background: white;
   transition: all var(--transition-normal);
@@ -924,4 +924,9 @@ body {
 .toolbar::-webkit-scrollbar-thumb:hover,
 .processing-panel::-webkit-scrollbar-thumb:hover {
   background: var(--gray-500);
-} 
+}
+
+.field-label {
+  font-size: 1.0rem;
+  font-weight: 700;
+}
