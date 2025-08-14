@@ -1,4 +1,4 @@
-# AI Image Editor
+# AI Eraser
 
 A full-stack web application for AI-powered image editing that allows users to remove objects from images by marking them with custom shapes and get high-quality edited results.
 
