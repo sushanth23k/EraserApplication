@@ -25,7 +25,7 @@ A full-stack web application for AI-powered image editing that allows users to r
 
 ## Model Information
 
-The AI Image Editor utilizes the bria/eraser model for object removal tasks. This model is hosted on Replicate, a platform for running machine learning models in the cloud. You can find more information about the model and its capabilities at the following URL:
+The AI Eraser utilizes the bria/eraser model for object removal tasks. This model is hosted on Replicate, a platform for running machine learning models in the cloud. You can find more information about the model and its capabilities at the following URL:
 
 [Bria/Eraser Model on Replicate](https://replicate.com/bria/eraser)
 
