@@ -2185,3 +2185,341 @@ detail: The requested resource could not be found.
 2025-08-13 23:47:40,231 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/z4dnx4wkm1rme0crmtr92b5sem "HTTP/1.1 200 OK"
 2025-08-13 23:47:40,755 - services.logging_service - INFO - Replicate mask-based object removal completed for request 633f0f8b-eee9-4990-b20e-086ffde85782
 2025-08-13 23:47:40,761 - werkzeug - INFO - 127.0.0.1 - - [13/Aug/2025 23:47:40] "POST /api/process HTTP/1.1" 200 -
+2025-08-16 20:34:06,384 - services.logging_service - INFO - Starting AI Image Editor API v2.0.0
+2025-08-16 20:34:06,386 - services.logging_service - INFO - Configuration: Debug=True, Host=0.0.0.0, Port=5001
+2025-08-16 20:34:06,453 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.12.145:5001
+2025-08-16 20:34:06,454 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-16 20:34:06,455 - werkzeug - INFO -  * Restarting with stat
+2025-08-16 20:34:06,633 - services.logging_service - INFO - Starting AI Image Editor API v2.0.0
+2025-08-16 20:34:06,633 - services.logging_service - INFO - Configuration: Debug=True, Host=0.0.0.0, Port=5001
+2025-08-16 20:34:06,651 - werkzeug - WARNING -  * Debugger is active!
+2025-08-16 20:34:06,659 - werkzeug - INFO -  * Debugger PIN: 752-409-219
+2025-08-16 20:34:17,915 - services.logging_service - WARNING - Endpoint not found, Data: {'path': '404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.'}
+2025-08-16 20:34:17,919 - werkzeug - INFO - 127.0.0.1 - - [16/Aug/2025 20:34:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-08-16 20:34:46,574 - services.logging_service - INFO - Starting AI Image Editor API v2.0.0
+2025-08-16 20:34:46,574 - services.logging_service - INFO - Configuration: Debug=True, Host=0.0.0.0, Port=5001
+2025-08-16 20:34:46,610 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.12.145:5001
+2025-08-16 20:34:46,610 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-16 20:34:46,611 - werkzeug - INFO -  * Restarting with stat
+2025-08-16 20:34:46,796 - services.logging_service - INFO - Starting AI Image Editor API v2.0.0
+2025-08-16 20:34:46,796 - services.logging_service - INFO - Configuration: Debug=True, Host=0.0.0.0, Port=5001
+2025-08-16 20:34:46,815 - werkzeug - WARNING -  * Debugger is active!
+2025-08-16 20:34:46,821 - werkzeug - INFO -  * Debugger PIN: 752-409-219
+2025-08-16 20:37:44,976 - services.logging_service - INFO - Starting AI Image Editor API v2.0.0
+2025-08-16 20:37:44,976 - services.logging_service - INFO - Configuration: Debug=True, Host=0.0.0.0, Port=5001
+2025-08-16 20:37:45,007 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.12.145:5001
+2025-08-16 20:37:45,007 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-16 20:37:45,009 - werkzeug - INFO -  * Restarting with stat
+2025-08-16 20:37:45,174 - services.logging_service - INFO - Starting AI Image Editor API v2.0.0
+2025-08-16 20:37:45,174 - services.logging_service - INFO - Configuration: Debug=True, Host=0.0.0.0, Port=5001
+2025-08-16 20:37:45,189 - werkzeug - WARNING -  * Debugger is active!
+2025-08-16 20:37:45,195 - werkzeug - INFO -  * Debugger PIN: 752-409-219
+2025-08-16 20:38:23,353 - services.logging_service - INFO - Starting AI Image Editor API v2.0.0
+2025-08-16 20:38:23,354 - services.logging_service - INFO - Configuration: Debug=True, Host=0.0.0.0, Port=5001
+2025-08-16 20:38:23,389 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.12.145:5001
+2025-08-16 20:38:23,389 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-16 20:38:23,391 - werkzeug - INFO -  * Restarting with stat
+2025-08-16 20:38:23,565 - services.logging_service - INFO - Starting AI Image Editor API v2.0.0
+2025-08-16 20:38:23,565 - services.logging_service - INFO - Configuration: Debug=True, Host=0.0.0.0, Port=5001
+2025-08-16 20:38:23,588 - werkzeug - WARNING -  * Debugger is active!
+2025-08-16 20:38:23,594 - werkzeug - INFO -  * Debugger PIN: 752-409-219
+2025-08-16 21:50:25,154 - services.logging_service - INFO - Starting AI Image Editor API v2.0.0
+2025-08-16 21:50:25,154 - services.logging_service - INFO - Configuration: Debug=True, Host=0.0.0.0, Port=5001
+2025-08-16 21:50:25,200 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.12.145:5001
+2025-08-16 21:50:25,200 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-16 21:50:25,201 - werkzeug - INFO -  * Restarting with stat
+2025-08-16 21:50:25,374 - services.logging_service - INFO - Starting AI Image Editor API v2.0.0
+2025-08-16 21:50:25,374 - services.logging_service - INFO - Configuration: Debug=True, Host=0.0.0.0, Port=5001
+2025-08-16 21:50:25,389 - werkzeug - WARNING -  * Debugger is active!
+2025-08-16 21:50:25,396 - werkzeug - INFO -  * Debugger PIN: 752-409-219
+2025-08-16 21:50:35,801 - services.logging_service - WARNING - Endpoint not found, Data: {'path': '404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.'}
+2025-08-16 21:50:35,804 - werkzeug - INFO - 127.0.0.1 - - [16/Aug/2025 21:50:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-08-16 21:50:59,774 - werkzeug - INFO - 127.0.0.1 - - [16/Aug/2025 21:50:59] "OPTIONS /api/upload HTTP/1.1" 200 -
+2025-08-16 21:50:59,859 - services.logging_service - INFO - Image uploaded - ID: bd192c2c-e0cd-45d1-84eb-6a026c8e6f4e, Size: 0
+2025-08-16 21:50:59,859 - werkzeug - INFO - 127.0.0.1 - - [16/Aug/2025 21:50:59] "POST /api/upload HTTP/1.1" 200 -
+2025-08-17 20:24:37,332 - services.logging_service - INFO - Starting AI Image Editor API v2.0.0
+2025-08-17 20:24:37,333 - services.logging_service - INFO - Configuration: Debug=True, Host=0.0.0.0, Port=5001
+2025-08-17 20:24:37,742 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.12.145:5001
+2025-08-17 20:24:37,743 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-17 20:24:37,745 - werkzeug - INFO -  * Restarting with stat
+2025-08-17 20:24:37,980 - services.logging_service - INFO - Starting AI Image Editor API v2.0.0
+2025-08-17 20:24:37,980 - services.logging_service - INFO - Configuration: Debug=True, Host=0.0.0.0, Port=5001
+2025-08-17 20:24:37,995 - werkzeug - WARNING -  * Debugger is active!
+2025-08-17 20:24:38,002 - werkzeug - INFO -  * Debugger PIN: 752-409-219
+2025-08-17 20:25:00,863 - werkzeug - INFO - 127.0.0.1 - - [17/Aug/2025 20:25:00] "OPTIONS /api/upload HTTP/1.1" 200 -
+2025-08-17 20:25:00,947 - services.logging_service - INFO - Image uploaded - ID: 2a321fa2-2fe8-4e03-b6dd-3bd35937af1b, Size: 0
+2025-08-17 20:25:00,947 - werkzeug - INFO - 127.0.0.1 - - [17/Aug/2025 20:25:00] "POST /api/upload HTTP/1.1" 200 -
+2025-08-17 20:29:04,897 - services.logging_service - INFO - Starting AI Image Editor API v2.0.0
+2025-08-17 20:29:04,897 - services.logging_service - INFO - Configuration: Debug=True, Host=0.0.0.0, Port=5001
+2025-08-17 20:29:04,940 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.12.145:5001
+2025-08-17 20:29:04,941 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-17 20:29:04,942 - werkzeug - INFO -  * Restarting with stat
+2025-08-17 20:29:05,122 - services.logging_service - INFO - Starting AI Image Editor API v2.0.0
+2025-08-17 20:29:05,122 - services.logging_service - INFO - Configuration: Debug=True, Host=0.0.0.0, Port=5001
+2025-08-17 20:29:05,136 - werkzeug - WARNING -  * Debugger is active!
+2025-08-17 20:29:05,142 - werkzeug - INFO -  * Debugger PIN: 752-409-219
+2025-08-17 20:29:23,906 - werkzeug - INFO - 127.0.0.1 - - [17/Aug/2025 20:29:23] "OPTIONS /api/upload HTTP/1.1" 200 -
+2025-08-17 20:29:23,962 - services.logging_service - INFO - Image uploaded - ID: 23ca0486-6f81-4752-a836-91afce5a811b, Size: 0
+2025-08-17 20:29:23,962 - werkzeug - INFO - 127.0.0.1 - - [17/Aug/2025 20:29:23] "POST /api/upload HTTP/1.1" 200 -
+2025-08-17 20:29:37,213 - werkzeug - INFO - 127.0.0.1 - - [17/Aug/2025 20:29:37] "OPTIONS /api/upload HTTP/1.1" 200 -
+2025-08-17 20:29:37,263 - services.logging_service - INFO - Image uploaded - ID: 54dd7573-f77c-4adc-856b-32848cb905d3, Size: 0
+2025-08-17 20:29:37,263 - werkzeug - INFO - 127.0.0.1 - - [17/Aug/2025 20:29:37] "POST /api/upload HTTP/1.1" 200 -
+2025-08-17 20:32:08,843 - services.logging_service - INFO - Starting AI Image Editor API v2.0.0
+2025-08-17 20:32:08,843 - services.logging_service - INFO - Configuration: Debug=True, Host=0.0.0.0, Port=5001
+2025-08-17 20:32:08,889 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.12.145:5001
+2025-08-17 20:32:08,889 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-17 20:32:08,891 - werkzeug - INFO -  * Restarting with stat
+2025-08-17 20:32:09,108 - services.logging_service - INFO - Starting AI Image Editor API v2.0.0
+2025-08-17 20:32:09,108 - services.logging_service - INFO - Configuration: Debug=True, Host=0.0.0.0, Port=5001
+2025-08-17 20:32:09,131 - werkzeug - WARNING -  * Debugger is active!
+2025-08-17 20:32:09,140 - werkzeug - INFO -  * Debugger PIN: 752-409-219
+2025-08-17 20:32:29,127 - werkzeug - INFO - 127.0.0.1 - - [17/Aug/2025 20:32:29] "OPTIONS /api/upload HTTP/1.1" 200 -
+2025-08-17 20:32:29,194 - services.logging_service - INFO - Image uploaded - ID: 3c6144ae-95be-48d6-a44b-a1a197085b76, Size: 0
+2025-08-17 20:32:29,196 - werkzeug - INFO - 127.0.0.1 - - [17/Aug/2025 20:32:29] "POST /api/upload HTTP/1.1" 200 -
+2025-08-17 23:29:11,762 - services.logging_service - INFO - Starting AI Image Editor API v2.0.0
+2025-08-17 23:29:11,763 - services.logging_service - INFO - Configuration: Debug=True, Host=0.0.0.0, Port=5001
+2025-08-17 23:29:11,819 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.12.145:5001
+2025-08-17 23:29:11,819 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-17 23:29:11,820 - werkzeug - INFO -  * Restarting with stat
+2025-08-17 23:29:11,991 - services.logging_service - INFO - Starting AI Image Editor API v2.0.0
+2025-08-17 23:29:11,991 - services.logging_service - INFO - Configuration: Debug=True, Host=0.0.0.0, Port=5001
+2025-08-17 23:29:12,006 - werkzeug - WARNING -  * Debugger is active!
+2025-08-17 23:29:12,013 - werkzeug - INFO -  * Debugger PIN: 752-409-219
+2025-08-17 23:30:07,867 - werkzeug - INFO - 127.0.0.1 - - [17/Aug/2025 23:30:07] "OPTIONS /api/upload HTTP/1.1" 200 -
+2025-08-17 23:30:07,981 - services.logging_service - INFO - Image uploaded - ID: b1234483-b96e-48a6-a3a8-7ec770b55323, Size: 0
+2025-08-17 23:30:07,981 - werkzeug - INFO - 127.0.0.1 - - [17/Aug/2025 23:30:07] "POST /api/upload HTTP/1.1" 200 -
+2025-08-17 23:31:27,882 - werkzeug - INFO - 127.0.0.1 - - [17/Aug/2025 23:31:27] "OPTIONS /api/upload HTTP/1.1" 200 -
+2025-08-17 23:31:27,928 - services.logging_service - INFO - Image uploaded - ID: 8c886f16-f18e-44ba-b679-83f37e5fceb9, Size: 0
+2025-08-17 23:31:27,928 - werkzeug - INFO - 127.0.0.1 - - [17/Aug/2025 23:31:27] "POST /api/upload HTTP/1.1" 200 -
+2025-08-17 23:33:33,063 - werkzeug - INFO - 127.0.0.1 - - [17/Aug/2025 23:33:33] "OPTIONS /api/process HTTP/1.1" 200 -
+2025-08-17 23:33:33,219 - services.logging_service - INFO - Starting Replicate object removal for request 2d263fa9-d506-4f72-99b4-841df7781996
+2025-08-17 23:33:33,228 - services.logging_service - INFO - Starting Replicate object removal with mask-based approach using 3 regions
+2025-08-17 23:33:33,979 - httpx - INFO - HTTP Request: POST https://api.replicate.com/v1/models/bria/eraser/predictions "HTTP/1.1 201 Created"
+2025-08-17 23:33:34,587 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/jkmdn02ea1rmc0crqcyt0708dm "HTTP/1.1 200 OK"
+2025-08-17 23:33:35,204 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/jkmdn02ea1rmc0crqcyt0708dm "HTTP/1.1 200 OK"
+2025-08-17 23:33:35,803 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/jkmdn02ea1rmc0crqcyt0708dm "HTTP/1.1 200 OK"
+2025-08-17 23:33:36,402 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/jkmdn02ea1rmc0crqcyt0708dm "HTTP/1.1 200 OK"
+2025-08-17 23:33:37,004 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/jkmdn02ea1rmc0crqcyt0708dm "HTTP/1.1 200 OK"
+2025-08-17 23:33:37,603 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/jkmdn02ea1rmc0crqcyt0708dm "HTTP/1.1 200 OK"
+2025-08-17 23:33:38,213 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/jkmdn02ea1rmc0crqcyt0708dm "HTTP/1.1 200 OK"
+2025-08-17 23:33:38,823 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/jkmdn02ea1rmc0crqcyt0708dm "HTTP/1.1 200 OK"
+2025-08-17 23:33:39,427 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/jkmdn02ea1rmc0crqcyt0708dm "HTTP/1.1 200 OK"
+2025-08-17 23:33:40,041 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/jkmdn02ea1rmc0crqcyt0708dm "HTTP/1.1 200 OK"
+2025-08-17 23:33:40,645 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/jkmdn02ea1rmc0crqcyt0708dm "HTTP/1.1 200 OK"
+2025-08-17 23:33:41,263 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/jkmdn02ea1rmc0crqcyt0708dm "HTTP/1.1 200 OK"
+2025-08-17 23:33:41,893 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/jkmdn02ea1rmc0crqcyt0708dm "HTTP/1.1 200 OK"
+2025-08-17 23:33:42,498 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/jkmdn02ea1rmc0crqcyt0708dm "HTTP/1.1 200 OK"
+2025-08-17 23:33:43,103 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/jkmdn02ea1rmc0crqcyt0708dm "HTTP/1.1 200 OK"
+2025-08-17 23:33:43,712 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/jkmdn02ea1rmc0crqcyt0708dm "HTTP/1.1 200 OK"
+2025-08-17 23:33:44,317 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/jkmdn02ea1rmc0crqcyt0708dm "HTTP/1.1 200 OK"
+2025-08-17 23:33:44,938 - services.logging_service - INFO - Replicate mask-based object removal completed for request 2d263fa9-d506-4f72-99b4-841df7781996
+2025-08-17 23:33:44,944 - werkzeug - INFO - 127.0.0.1 - - [17/Aug/2025 23:33:44] "POST /api/process HTTP/1.1" 200 -
+2025-08-17 23:35:03,710 - werkzeug - INFO - 127.0.0.1 - - [17/Aug/2025 23:35:03] "OPTIONS /api/upload HTTP/1.1" 200 -
+2025-08-17 23:35:03,742 - services.logging_service - INFO - Image uploaded - ID: caffc66b-3b3f-4999-842b-6852215f9bdf, Size: 0
+2025-08-17 23:35:03,742 - werkzeug - INFO - 127.0.0.1 - - [17/Aug/2025 23:35:03] "POST /api/upload HTTP/1.1" 200 -
+2025-08-17 23:35:22,203 - werkzeug - INFO - 127.0.0.1 - - [17/Aug/2025 23:35:22] "OPTIONS /api/upload HTTP/1.1" 200 -
+2025-08-17 23:35:22,230 - services.logging_service - INFO - Image uploaded - ID: 36857c2b-a43b-4628-9360-0902ee355d02, Size: 0
+2025-08-17 23:35:22,231 - werkzeug - INFO - 127.0.0.1 - - [17/Aug/2025 23:35:22] "POST /api/upload HTTP/1.1" 200 -
+2025-08-17 23:35:53,041 - werkzeug - INFO - 127.0.0.1 - - [17/Aug/2025 23:35:53] "OPTIONS /api/upload HTTP/1.1" 200 -
+2025-08-17 23:35:53,071 - services.logging_service - INFO - Image uploaded - ID: 0d2e3a5d-e4b1-420f-8e29-e18db3a4807a, Size: 0
+2025-08-17 23:35:53,072 - werkzeug - INFO - 127.0.0.1 - - [17/Aug/2025 23:35:53] "POST /api/upload HTTP/1.1" 200 -
+2025-08-17 23:36:32,818 - werkzeug - INFO - 127.0.0.1 - - [17/Aug/2025 23:36:32] "OPTIONS /api/upload HTTP/1.1" 200 -
+2025-08-17 23:36:32,848 - services.logging_service - INFO - Image uploaded - ID: 51b2e21c-27a0-4d5a-8840-35511eac8472, Size: 0
+2025-08-17 23:36:32,849 - werkzeug - INFO - 127.0.0.1 - - [17/Aug/2025 23:36:32] "POST /api/upload HTTP/1.1" 200 -
+2025-08-17 23:37:31,898 - werkzeug - INFO - 127.0.0.1 - - [17/Aug/2025 23:37:31] "OPTIONS /api/process HTTP/1.1" 200 -
+2025-08-17 23:37:31,913 - services.logging_service - INFO - Starting Replicate object removal for request b95b4c5a-bb2a-4882-b185-361a1b71b757
+2025-08-17 23:37:31,924 - services.logging_service - INFO - Starting Replicate object removal with mask-based approach using 2 regions
+2025-08-17 23:37:32,478 - httpx - INFO - HTTP Request: POST https://api.replicate.com/v1/models/bria/eraser/predictions "HTTP/1.1 201 Created"
+2025-08-17 23:37:33,088 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/4jjjzxzj21rmc0crqd08x0ff4w "HTTP/1.1 200 OK"
+2025-08-17 23:37:33,700 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/4jjjzxzj21rmc0crqd08x0ff4w "HTTP/1.1 200 OK"
+2025-08-17 23:37:34,319 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/4jjjzxzj21rmc0crqd08x0ff4w "HTTP/1.1 200 OK"
+2025-08-17 23:37:34,923 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/4jjjzxzj21rmc0crqd08x0ff4w "HTTP/1.1 200 OK"
+2025-08-17 23:37:35,547 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/4jjjzxzj21rmc0crqd08x0ff4w "HTTP/1.1 200 OK"
+2025-08-17 23:37:36,174 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/4jjjzxzj21rmc0crqd08x0ff4w "HTTP/1.1 200 OK"
+2025-08-17 23:37:36,801 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/4jjjzxzj21rmc0crqd08x0ff4w "HTTP/1.1 200 OK"
+2025-08-17 23:37:37,429 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/4jjjzxzj21rmc0crqd08x0ff4w "HTTP/1.1 200 OK"
+2025-08-17 23:37:38,070 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/4jjjzxzj21rmc0crqd08x0ff4w "HTTP/1.1 200 OK"
+2025-08-17 23:37:38,509 - services.logging_service - INFO - Replicate mask-based object removal completed for request b95b4c5a-bb2a-4882-b185-361a1b71b757
+2025-08-17 23:37:38,515 - werkzeug - INFO - 127.0.0.1 - - [17/Aug/2025 23:37:38] "POST /api/process HTTP/1.1" 200 -
+2025-08-17 23:38:26,701 - werkzeug - INFO - 127.0.0.1 - - [17/Aug/2025 23:38:26] "OPTIONS /api/upload HTTP/1.1" 200 -
+2025-08-17 23:38:26,729 - services.logging_service - INFO - Image uploaded - ID: d082e41e-0cf9-4adc-8a99-9a7e2283f7c6, Size: 0
+2025-08-17 23:38:26,730 - werkzeug - INFO - 127.0.0.1 - - [17/Aug/2025 23:38:26] "POST /api/upload HTTP/1.1" 200 -
+2025-08-17 23:40:54,715 - werkzeug - INFO - 127.0.0.1 - - [17/Aug/2025 23:40:54] "OPTIONS /api/process HTTP/1.1" 200 -
+2025-08-17 23:40:54,867 - services.logging_service - INFO - Starting Replicate object removal for request bc2e5b02-73c8-4e7c-a47f-e05c7d04abf0
+2025-08-17 23:40:54,873 - services.logging_service - INFO - Starting Replicate object removal with mask-based approach using 3 regions
+2025-08-17 23:40:55,531 - httpx - INFO - HTTP Request: POST https://api.replicate.com/v1/models/bria/eraser/predictions "HTTP/1.1 201 Created"
+2025-08-17 23:40:56,148 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/ekm2xr0b7drm80crqd2957yfzw "HTTP/1.1 200 OK"
+2025-08-17 23:40:56,764 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/ekm2xr0b7drm80crqd2957yfzw "HTTP/1.1 200 OK"
+2025-08-17 23:40:57,381 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/ekm2xr0b7drm80crqd2957yfzw "HTTP/1.1 200 OK"
+2025-08-17 23:40:57,992 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/ekm2xr0b7drm80crqd2957yfzw "HTTP/1.1 200 OK"
+2025-08-17 23:40:58,605 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/ekm2xr0b7drm80crqd2957yfzw "HTTP/1.1 200 OK"
+2025-08-17 23:40:59,223 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/ekm2xr0b7drm80crqd2957yfzw "HTTP/1.1 200 OK"
+2025-08-17 23:40:59,838 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/ekm2xr0b7drm80crqd2957yfzw "HTTP/1.1 200 OK"
+2025-08-17 23:41:00,461 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/ekm2xr0b7drm80crqd2957yfzw "HTTP/1.1 200 OK"
+2025-08-17 23:41:01,081 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/ekm2xr0b7drm80crqd2957yfzw "HTTP/1.1 200 OK"
+2025-08-17 23:41:01,702 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/ekm2xr0b7drm80crqd2957yfzw "HTTP/1.1 200 OK"
+2025-08-17 23:41:02,223 - services.logging_service - INFO - Replicate mask-based object removal completed for request bc2e5b02-73c8-4e7c-a47f-e05c7d04abf0
+2025-08-17 23:41:02,228 - werkzeug - INFO - 127.0.0.1 - - [17/Aug/2025 23:41:02] "POST /api/process HTTP/1.1" 200 -
+2025-08-17 23:42:31,640 - werkzeug - INFO - 127.0.0.1 - - [17/Aug/2025 23:42:31] "OPTIONS /api/upload HTTP/1.1" 200 -
+2025-08-17 23:42:31,661 - services.logging_service - INFO - Image uploaded - ID: b06d9369-46bb-49f7-a316-864106a509a9, Size: 0
+2025-08-17 23:42:31,661 - werkzeug - INFO - 127.0.0.1 - - [17/Aug/2025 23:42:31] "POST /api/upload HTTP/1.1" 200 -
+2025-08-17 23:43:41,454 - werkzeug - INFO - 127.0.0.1 - - [17/Aug/2025 23:43:41] "OPTIONS /api/upload HTTP/1.1" 200 -
+2025-08-17 23:43:41,503 - services.logging_service - INFO - Image uploaded - ID: 82960a05-a21f-451c-b6b2-0a8a1fd5eeed, Size: 0
+2025-08-17 23:43:41,503 - werkzeug - INFO - 127.0.0.1 - - [17/Aug/2025 23:43:41] "POST /api/upload HTTP/1.1" 200 -
+2025-08-17 23:45:12,073 - werkzeug - INFO - 127.0.0.1 - - [17/Aug/2025 23:45:12] "OPTIONS /api/process HTTP/1.1" 200 -
+2025-08-17 23:45:12,225 - services.logging_service - INFO - Starting Replicate object removal for request d86c3c3d-1eb3-468c-8733-177fa2a9e1cb
+2025-08-17 23:45:12,230 - services.logging_service - INFO - Starting Replicate object removal with mask-based approach using 1 regions
+2025-08-17 23:45:12,740 - httpx - INFO - HTTP Request: POST https://api.replicate.com/v1/models/bria/eraser/predictions "HTTP/1.1 201 Created"
+2025-08-17 23:45:13,356 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/fnjqd5qr5nrma0crqd3s7hgdx4 "HTTP/1.1 200 OK"
+2025-08-17 23:45:13,973 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/fnjqd5qr5nrma0crqd3s7hgdx4 "HTTP/1.1 200 OK"
+2025-08-17 23:45:14,583 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/fnjqd5qr5nrma0crqd3s7hgdx4 "HTTP/1.1 200 OK"
+2025-08-17 23:45:15,196 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/fnjqd5qr5nrma0crqd3s7hgdx4 "HTTP/1.1 200 OK"
+2025-08-17 23:45:15,828 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/fnjqd5qr5nrma0crqd3s7hgdx4 "HTTP/1.1 200 OK"
+2025-08-17 23:45:16,461 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/fnjqd5qr5nrma0crqd3s7hgdx4 "HTTP/1.1 200 OK"
+2025-08-17 23:45:17,099 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/fnjqd5qr5nrma0crqd3s7hgdx4 "HTTP/1.1 200 OK"
+2025-08-17 23:45:17,550 - services.logging_service - INFO - Replicate mask-based object removal completed for request d86c3c3d-1eb3-468c-8733-177fa2a9e1cb
+2025-08-17 23:45:17,556 - werkzeug - INFO - 127.0.0.1 - - [17/Aug/2025 23:45:17] "POST /api/process HTTP/1.1" 200 -
+2025-08-17 23:46:24,619 - werkzeug - INFO - 127.0.0.1 - - [17/Aug/2025 23:46:24] "OPTIONS /api/process HTTP/1.1" 200 -
+2025-08-17 23:46:24,774 - services.logging_service - INFO - Starting Replicate object removal for request c9221249-c90f-44b1-894a-88702b6e0ab8
+2025-08-17 23:46:24,782 - services.logging_service - INFO - Starting Replicate object removal with mask-based approach using 2 regions
+2025-08-17 23:46:25,567 - httpx - INFO - HTTP Request: POST https://api.replicate.com/v1/models/bria/eraser/predictions "HTTP/1.1 201 Created"
+2025-08-17 23:46:26,184 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/p9hdhk0mj1rmc0crqd4rv7494g "HTTP/1.1 200 OK"
+2025-08-17 23:46:26,807 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/p9hdhk0mj1rmc0crqd4rv7494g "HTTP/1.1 200 OK"
+2025-08-17 23:46:27,421 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/p9hdhk0mj1rmc0crqd4rv7494g "HTTP/1.1 200 OK"
+2025-08-17 23:46:28,045 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/p9hdhk0mj1rmc0crqd4rv7494g "HTTP/1.1 200 OK"
+2025-08-17 23:46:28,679 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/p9hdhk0mj1rmc0crqd4rv7494g "HTTP/1.1 200 OK"
+2025-08-17 23:46:29,309 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/p9hdhk0mj1rmc0crqd4rv7494g "HTTP/1.1 200 OK"
+2025-08-17 23:46:29,924 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/p9hdhk0mj1rmc0crqd4rv7494g "HTTP/1.1 200 OK"
+2025-08-17 23:46:30,394 - services.logging_service - INFO - Replicate mask-based object removal completed for request c9221249-c90f-44b1-894a-88702b6e0ab8
+2025-08-17 23:46:30,400 - werkzeug - INFO - 127.0.0.1 - - [17/Aug/2025 23:46:30] "POST /api/process HTTP/1.1" 200 -
+2025-08-17 23:47:39,445 - werkzeug - INFO - 127.0.0.1 - - [17/Aug/2025 23:47:39] "OPTIONS /api/upload HTTP/1.1" 200 -
+2025-08-17 23:47:39,478 - services.logging_service - INFO - Image uploaded - ID: 0f0add09-3fe2-47bb-8544-983f3a17d909, Size: 0
+2025-08-17 23:47:39,479 - werkzeug - INFO - 127.0.0.1 - - [17/Aug/2025 23:47:39] "POST /api/upload HTTP/1.1" 200 -
+2025-08-17 23:47:52,577 - werkzeug - INFO - 127.0.0.1 - - [17/Aug/2025 23:47:52] "OPTIONS /api/upload HTTP/1.1" 200 -
+2025-08-17 23:47:52,608 - services.logging_service - INFO - Image uploaded - ID: 206b6115-d547-4ff1-85b5-33029bb23ee5, Size: 0
+2025-08-17 23:47:52,609 - werkzeug - INFO - 127.0.0.1 - - [17/Aug/2025 23:47:52] "POST /api/upload HTTP/1.1" 200 -
+2025-08-17 23:49:44,683 - werkzeug - INFO - 127.0.0.1 - - [17/Aug/2025 23:49:44] "OPTIONS /api/process HTTP/1.1" 200 -
+2025-08-17 23:49:44,835 - services.logging_service - INFO - Starting Replicate object removal for request 5bbed7a9-0b90-4d41-b182-f8e14c5dad3f
+2025-08-17 23:49:44,842 - services.logging_service - INFO - Starting Replicate object removal with mask-based approach using 3 regions
+2025-08-17 23:49:45,352 - httpx - INFO - HTTP Request: POST https://api.replicate.com/v1/models/bria/eraser/predictions "HTTP/1.1 201 Created"
+2025-08-17 23:49:45,954 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/dgvchhs11xrmc0crqd6bv5dex0 "HTTP/1.1 200 OK"
+2025-08-17 23:49:46,562 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/dgvchhs11xrmc0crqd6bv5dex0 "HTTP/1.1 200 OK"
+2025-08-17 23:49:47,174 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/dgvchhs11xrmc0crqd6bv5dex0 "HTTP/1.1 200 OK"
+2025-08-17 23:49:47,778 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/dgvchhs11xrmc0crqd6bv5dex0 "HTTP/1.1 200 OK"
+2025-08-17 23:49:48,399 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/dgvchhs11xrmc0crqd6bv5dex0 "HTTP/1.1 200 OK"
+2025-08-17 23:49:49,014 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/dgvchhs11xrmc0crqd6bv5dex0 "HTTP/1.1 200 OK"
+2025-08-17 23:49:49,628 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/dgvchhs11xrmc0crqd6bv5dex0 "HTTP/1.1 200 OK"
+2025-08-17 23:49:50,225 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/dgvchhs11xrmc0crqd6bv5dex0 "HTTP/1.1 200 OK"
+2025-08-17 23:49:50,853 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/dgvchhs11xrmc0crqd6bv5dex0 "HTTP/1.1 200 OK"
+2025-08-17 23:49:51,471 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/dgvchhs11xrmc0crqd6bv5dex0 "HTTP/1.1 200 OK"
+2025-08-17 23:49:51,925 - services.logging_service - INFO - Replicate mask-based object removal completed for request 5bbed7a9-0b90-4d41-b182-f8e14c5dad3f
+2025-08-17 23:49:51,931 - werkzeug - INFO - 127.0.0.1 - - [17/Aug/2025 23:49:51] "POST /api/process HTTP/1.1" 200 -
+2025-08-17 23:57:02,944 - services.logging_service - INFO - Starting AI Image Editor API v2.0.0
+2025-08-17 23:57:02,944 - services.logging_service - INFO - Configuration: Debug=True, Host=0.0.0.0, Port=5001
+2025-08-17 23:57:02,984 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.12.145:5001
+2025-08-17 23:57:02,984 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-17 23:57:02,985 - werkzeug - INFO -  * Restarting with stat
+2025-08-17 23:57:03,154 - services.logging_service - INFO - Starting AI Image Editor API v2.0.0
+2025-08-17 23:57:03,154 - services.logging_service - INFO - Configuration: Debug=True, Host=0.0.0.0, Port=5001
+2025-08-17 23:57:03,173 - werkzeug - WARNING -  * Debugger is active!
+2025-08-17 23:57:03,179 - werkzeug - INFO -  * Debugger PIN: 752-409-219
+2025-08-17 23:57:11,772 - werkzeug - INFO - 127.0.0.1 - - [17/Aug/2025 23:57:11] "OPTIONS /api/process HTTP/1.1" 200 -
+2025-08-17 23:57:11,809 - services.logging_service - INFO - Starting Replicate object removal for request 26cb0d55-8635-4e99-814c-50f07d5f401b
+2025-08-17 23:57:11,815 - services.logging_service - INFO - Starting Replicate object removal with mask-based approach using 3 regions
+2025-08-17 23:57:12,489 - httpx - INFO - HTTP Request: POST https://api.replicate.com/v1/models/bria/eraser/predictions "HTTP/1.1 201 Created"
+2025-08-17 23:57:13,107 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/9rfn9g7knxrm80crqd9aemxyxc "HTTP/1.1 200 OK"
+2025-08-17 23:57:13,732 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/9rfn9g7knxrm80crqd9aemxyxc "HTTP/1.1 200 OK"
+2025-08-17 23:57:14,342 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/9rfn9g7knxrm80crqd9aemxyxc "HTTP/1.1 200 OK"
+2025-08-17 23:57:14,956 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/9rfn9g7knxrm80crqd9aemxyxc "HTTP/1.1 200 OK"
+2025-08-17 23:57:15,581 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/9rfn9g7knxrm80crqd9aemxyxc "HTTP/1.1 200 OK"
+2025-08-17 23:57:16,199 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/9rfn9g7knxrm80crqd9aemxyxc "HTTP/1.1 200 OK"
+2025-08-17 23:57:16,836 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/9rfn9g7knxrm80crqd9aemxyxc "HTTP/1.1 200 OK"
+2025-08-17 23:57:17,453 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/9rfn9g7knxrm80crqd9aemxyxc "HTTP/1.1 200 OK"
+2025-08-17 23:57:18,084 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/9rfn9g7knxrm80crqd9aemxyxc "HTTP/1.1 200 OK"
+2025-08-17 23:57:18,706 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/9rfn9g7knxrm80crqd9aemxyxc "HTTP/1.1 200 OK"
+2025-08-17 23:57:19,333 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/9rfn9g7knxrm80crqd9aemxyxc "HTTP/1.1 200 OK"
+2025-08-17 23:57:19,949 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/9rfn9g7knxrm80crqd9aemxyxc "HTTP/1.1 200 OK"
+2025-08-17 23:57:20,565 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/9rfn9g7knxrm80crqd9aemxyxc "HTTP/1.1 200 OK"
+2025-08-17 23:57:21,221 - services.logging_service - INFO - Replicate mask-based object removal completed for request 26cb0d55-8635-4e99-814c-50f07d5f401b
+2025-08-17 23:57:21,227 - werkzeug - INFO - 127.0.0.1 - - [17/Aug/2025 23:57:21] "POST /api/process HTTP/1.1" 200 -
+2025-08-17 23:58:06,079 - werkzeug - INFO - 127.0.0.1 - - [17/Aug/2025 23:58:06] "OPTIONS /api/upload HTTP/1.1" 200 -
+2025-08-17 23:58:06,125 - services.logging_service - INFO - Image uploaded - ID: ce67bb32-c149-4637-adfb-beaa024c0d9f, Size: 0
+2025-08-17 23:58:06,125 - werkzeug - INFO - 127.0.0.1 - - [17/Aug/2025 23:58:06] "POST /api/upload HTTP/1.1" 200 -
+2025-08-17 23:59:10,214 - werkzeug - INFO - 127.0.0.1 - - [17/Aug/2025 23:59:10] "OPTIONS /api/process HTTP/1.1" 200 -
+2025-08-17 23:59:10,377 - services.logging_service - INFO - Starting Replicate object removal for request 9ec563f8-3618-4b4c-8619-65c7807d57a8
+2025-08-17 23:59:10,386 - services.logging_service - INFO - Starting Replicate object removal with mask-based approach using 2 regions
+2025-08-17 23:59:10,874 - httpx - INFO - HTTP Request: POST https://api.replicate.com/v1/models/bria/eraser/predictions "HTTP/1.1 201 Created"
+2025-08-17 23:59:11,513 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/sk2190p239rm80crqdaagcfzn0 "HTTP/1.1 200 OK"
+2025-08-17 23:59:12,116 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/sk2190p239rm80crqdaagcfzn0 "HTTP/1.1 200 OK"
+2025-08-17 23:59:12,719 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/sk2190p239rm80crqdaagcfzn0 "HTTP/1.1 200 OK"
+2025-08-17 23:59:13,333 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/sk2190p239rm80crqdaagcfzn0 "HTTP/1.1 200 OK"
+2025-08-17 23:59:13,943 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/sk2190p239rm80crqdaagcfzn0 "HTTP/1.1 200 OK"
+2025-08-17 23:59:14,549 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/sk2190p239rm80crqdaagcfzn0 "HTTP/1.1 200 OK"
+2025-08-17 23:59:15,157 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/sk2190p239rm80crqdaagcfzn0 "HTTP/1.1 200 OK"
+2025-08-17 23:59:15,762 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/sk2190p239rm80crqdaagcfzn0 "HTTP/1.1 200 OK"
+2025-08-17 23:59:16,367 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/sk2190p239rm80crqdaagcfzn0 "HTTP/1.1 200 OK"
+2025-08-17 23:59:16,974 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/sk2190p239rm80crqdaagcfzn0 "HTTP/1.1 200 OK"
+2025-08-17 23:59:17,510 - services.logging_service - INFO - Replicate mask-based object removal completed for request 9ec563f8-3618-4b4c-8619-65c7807d57a8
+2025-08-17 23:59:17,516 - werkzeug - INFO - 127.0.0.1 - - [17/Aug/2025 23:59:17] "POST /api/process HTTP/1.1" 200 -
+2025-08-18 00:01:03,039 - werkzeug - INFO - 127.0.0.1 - - [18/Aug/2025 00:01:03] "OPTIONS /api/process HTTP/1.1" 200 -
+2025-08-18 00:01:03,196 - services.logging_service - INFO - Starting Replicate object removal for request 322ab400-3b66-40b6-9dab-056571764439
+2025-08-18 00:01:03,208 - services.logging_service - INFO - Starting Replicate object removal with mask-based approach using 1 regions
+2025-08-18 00:01:03,774 - httpx - INFO - HTTP Request: POST https://api.replicate.com/v1/models/bria/eraser/predictions "HTTP/1.1 201 Created"
+2025-08-18 00:01:04,386 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/zpzhvvbv3xrm80crqdb85465m8 "HTTP/1.1 200 OK"
+2025-08-18 00:01:05,019 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/zpzhvvbv3xrm80crqdb85465m8 "HTTP/1.1 200 OK"
+2025-08-18 00:01:05,644 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/zpzhvvbv3xrm80crqdb85465m8 "HTTP/1.1 200 OK"
+2025-08-18 00:01:06,267 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/zpzhvvbv3xrm80crqdb85465m8 "HTTP/1.1 200 OK"
+2025-08-18 00:01:06,894 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/zpzhvvbv3xrm80crqdb85465m8 "HTTP/1.1 200 OK"
+2025-08-18 00:01:07,514 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/zpzhvvbv3xrm80crqdb85465m8 "HTTP/1.1 200 OK"
+2025-08-18 00:01:08,160 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/zpzhvvbv3xrm80crqdb85465m8 "HTTP/1.1 200 OK"
+2025-08-18 00:01:08,800 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/zpzhvvbv3xrm80crqdb85465m8 "HTTP/1.1 200 OK"
+2025-08-18 00:01:09,441 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/zpzhvvbv3xrm80crqdb85465m8 "HTTP/1.1 200 OK"
+2025-08-18 00:01:09,863 - services.logging_service - INFO - Replicate mask-based object removal completed for request 322ab400-3b66-40b6-9dab-056571764439
+2025-08-18 00:01:09,869 - werkzeug - INFO - 127.0.0.1 - - [18/Aug/2025 00:01:09] "POST /api/process HTTP/1.1" 200 -
+2025-08-18 00:01:46,432 - werkzeug - INFO - 127.0.0.1 - - [18/Aug/2025 00:01:46] "OPTIONS /api/process HTTP/1.1" 200 -
+2025-08-18 00:01:46,461 - services.logging_service - INFO - Starting Replicate object removal for request 0900ed5c-1f8b-4cf3-9b96-e555e68d4f1a
+2025-08-18 00:01:46,476 - services.logging_service - INFO - Starting Replicate object removal with mask-based approach using 1 regions
+2025-08-18 00:01:47,074 - httpx - INFO - HTTP Request: POST https://api.replicate.com/v1/models/bria/eraser/predictions "HTTP/1.1 201 Created"
+2025-08-18 00:01:47,695 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/yynpyv148drmc0crqdbtvjx04r "HTTP/1.1 200 OK"
+2025-08-18 00:01:48,298 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/yynpyv148drmc0crqdbtvjx04r "HTTP/1.1 200 OK"
+2025-08-18 00:01:48,911 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/yynpyv148drmc0crqdbtvjx04r "HTTP/1.1 200 OK"
+2025-08-18 00:01:49,525 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/yynpyv148drmc0crqdbtvjx04r "HTTP/1.1 200 OK"
+2025-08-18 00:01:50,133 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/yynpyv148drmc0crqdbtvjx04r "HTTP/1.1 200 OK"
+2025-08-18 00:01:50,744 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/yynpyv148drmc0crqdbtvjx04r "HTTP/1.1 200 OK"
+2025-08-18 00:01:51,376 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/yynpyv148drmc0crqdbtvjx04r "HTTP/1.1 200 OK"
+2025-08-18 00:01:52,001 - httpx - INFO - HTTP Request: GET https://api.replicate.com/v1/predictions/yynpyv148drmc0crqdbtvjx04r "HTTP/1.1 200 OK"
+2025-08-18 00:01:52,425 - services.logging_service - INFO - Replicate mask-based object removal completed for request 0900ed5c-1f8b-4cf3-9b96-e555e68d4f1a
+2025-08-18 00:01:52,430 - werkzeug - INFO - 127.0.0.1 - - [18/Aug/2025 00:01:52] "POST /api/process HTTP/1.1" 200 -
+2025-08-18 00:02:06,054 - werkzeug - INFO - 127.0.0.1 - - [18/Aug/2025 00:02:06] "OPTIONS /api/download HTTP/1.1" 200 -
+2025-08-18 00:02:06,076 - services.logging_service - INFO - Image prepared for download - ID: 00db6bc4-1b56-461d-84d2-7b623b62cfd1
+2025-08-18 00:02:06,107 - werkzeug - INFO - 127.0.0.1 - - [18/Aug/2025 00:02:06] "POST /api/download HTTP/1.1" 200 -

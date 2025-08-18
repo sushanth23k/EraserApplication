@@ -71,7 +71,7 @@ function App() {
     setHistory(prev => [...prev, shapes]);
     setRedoStack([]);
     setShapes(prev => [...prev, shape]);
-  }, []);
+  }, [shapes]);
 
   // Handle shape updates
   const handleShapeUpdate = useCallback((shapeId: string, coordinates: Coordinate[]) => {
@@ -90,23 +90,27 @@ function App() {
     }
     setShapes([]);
     setProcessedResult(null);
-  }, []);
+  }, [shapes]);
 
   const handleUndo = useCallback(() => {
-    if (history.length === 0) return;
-    const last = history[history.length - 1];
-    setHistory(prev => prev.slice(0, prev.length - 1));
-    setRedoStack(prev => [...prev, shapes]);
-    setShapes(last);
-  }, [history, shapes]);
+    setHistory(prevHistory => {
+      if (prevHistory.length === 0) return prevHistory;
+      const last = prevHistory[prevHistory.length - 1];
+      setRedoStack(prev => [...prev, shapes]);
+      setShapes(last);
+      return prevHistory.slice(0, prevHistory.length - 1);
+    });
+  }, [shapes]);
 
   const handleRedo = useCallback(() => {
-    if (redoStack.length === 0) return;
-    const next = redoStack[redoStack.length - 1];
-    setRedoStack(prev => prev.slice(0, prev.length - 1));
-    setHistory(prev => [...prev, shapes]);
-    setShapes(next);
-  }, [redoStack, shapes]);
+    setRedoStack(prevRedo => {
+      if (prevRedo.length === 0) return prevRedo;
+      const next = prevRedo[prevRedo.length - 1];
+      setHistory(prev => [...prev, shapes]);
+      setShapes(next);
+      return prevRedo.slice(0, prevRedo.length - 1);
+    });
+  }, [shapes]);
 
   const handleRemoveImage = useCallback(() => {
     setCurrentImage(null);

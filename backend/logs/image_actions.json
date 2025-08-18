@@ -6520,5 +6520,294 @@
       "mode": "RGB",
       "file_size": 0
     }
+  },
+  {
+    "id": "84367155-d86c-485e-8f4b-0b10683cd97a",
+    "action_type": "upload",
+    "image_id": "bd192c2c-e0cd-45d1-84eb-6a026c8e6f4e",
+    "coordinates": null,
+    "description": null,
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+    "ip_address": "127.0.0.1",
+    "timestamp": "2025-08-16T21:50:59.848419",
+    "metadata": {
+      "width": 625,
+      "height": 417,
+      "format": "Unknown",
+      "mode": "RGB",
+      "file_size": 0
+    }
+  },
+  {
+    "id": "6e20d301-bf8e-4922-aa3d-cb3a1e2f9d61",
+    "action_type": "upload",
+    "image_id": "2a321fa2-2fe8-4e03-b6dd-3bd35937af1b",
+    "coordinates": null,
+    "description": null,
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+    "ip_address": "127.0.0.1",
+    "timestamp": "2025-08-17T20:25:00.935632",
+    "metadata": {
+      "width": 625,
+      "height": 417,
+      "format": "Unknown",
+      "mode": "RGB",
+      "file_size": 0
+    }
+  },
+  {
+    "id": "99c63753-3e5e-453f-bfb5-45254c7cde03",
+    "action_type": "upload",
+    "image_id": "23ca0486-6f81-4752-a836-91afce5a811b",
+    "coordinates": null,
+    "description": null,
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+    "ip_address": "127.0.0.1",
+    "timestamp": "2025-08-17T20:29:23.947791",
+    "metadata": {
+      "width": 625,
+      "height": 417,
+      "format": "Unknown",
+      "mode": "RGB",
+      "file_size": 0
+    }
+  },
+  {
+    "id": "2b686b92-eb44-4fe4-9e28-4123300f7dac",
+    "action_type": "upload",
+    "image_id": "54dd7573-f77c-4adc-856b-32848cb905d3",
+    "coordinates": null,
+    "description": null,
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+    "ip_address": "127.0.0.1",
+    "timestamp": "2025-08-17T20:29:37.226620",
+    "metadata": {
+      "width": 625,
+      "height": 417,
+      "format": "Unknown",
+      "mode": "RGB",
+      "file_size": 0
+    }
+  },
+  {
+    "id": "ef60fcb8-27e1-4207-b885-297824f08388",
+    "action_type": "upload",
+    "image_id": "3c6144ae-95be-48d6-a44b-a1a197085b76",
+    "coordinates": null,
+    "description": null,
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+    "ip_address": "127.0.0.1",
+    "timestamp": "2025-08-17T20:32:29.177065",
+    "metadata": {
+      "width": 625,
+      "height": 417,
+      "format": "Unknown",
+      "mode": "RGB",
+      "file_size": 0
+    }
+  },
+  {
+    "id": "e6ca089b-c782-4e9f-b921-b807202161af",
+    "action_type": "upload",
+    "image_id": "b1234483-b96e-48a6-a3a8-7ec770b55323",
+    "coordinates": null,
+    "description": null,
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+    "ip_address": "127.0.0.1",
+    "timestamp": "2025-08-17T23:30:07.971274",
+    "metadata": {
+      "width": 625,
+      "height": 417,
+      "format": "Unknown",
+      "mode": "RGB",
+      "file_size": 0
+    }
+  },
+  {
+    "id": "1383222d-44fa-46e0-aa22-ad114ba10750",
+    "action_type": "upload",
+    "image_id": "8c886f16-f18e-44ba-b679-83f37e5fceb9",
+    "coordinates": null,
+    "description": null,
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+    "ip_address": "127.0.0.1",
+    "timestamp": "2025-08-17T23:31:27.897048",
+    "metadata": {
+      "width": 625,
+      "height": 417,
+      "format": "Unknown",
+      "mode": "RGB",
+      "file_size": 0
+    }
+  },
+  {
+    "id": "cfd6edb9-539d-4a32-9c88-99e1da8d5797",
+    "action_type": "upload",
+    "image_id": "caffc66b-3b3f-4999-842b-6852215f9bdf",
+    "coordinates": null,
+    "description": null,
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+    "ip_address": "127.0.0.1",
+    "timestamp": "2025-08-17T23:35:03.724675",
+    "metadata": {
+      "width": 625,
+      "height": 417,
+      "format": "Unknown",
+      "mode": "RGB",
+      "file_size": 0
+    }
+  },
+  {
+    "id": "32e6a550-61d9-4d26-a0cb-95dd6985091b",
+    "action_type": "upload",
+    "image_id": "36857c2b-a43b-4628-9360-0902ee355d02",
+    "coordinates": null,
+    "description": null,
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+    "ip_address": "127.0.0.1",
+    "timestamp": "2025-08-17T23:35:22.216929",
+    "metadata": {
+      "width": 625,
+      "height": 417,
+      "format": "Unknown",
+      "mode": "RGB",
+      "file_size": 0
+    }
+  },
+  {
+    "id": "e083abc0-b572-416c-a651-ac09a5c76375",
+    "action_type": "upload",
+    "image_id": "0d2e3a5d-e4b1-420f-8e29-e18db3a4807a",
+    "coordinates": null,
+    "description": null,
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+    "ip_address": "127.0.0.1",
+    "timestamp": "2025-08-17T23:35:53.053823",
+    "metadata": {
+      "width": 625,
+      "height": 417,
+      "format": "Unknown",
+      "mode": "RGB",
+      "file_size": 0
+    }
+  },
+  {
+    "id": "9bd38d90-d093-4e4f-90d7-75c6c52bcc2f",
+    "action_type": "upload",
+    "image_id": "51b2e21c-27a0-4d5a-8840-35511eac8472",
+    "coordinates": null,
+    "description": null,
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+    "ip_address": "127.0.0.1",
+    "timestamp": "2025-08-17T23:36:32.829922",
+    "metadata": {
+      "width": 625,
+      "height": 417,
+      "format": "Unknown",
+      "mode": "RGB",
+      "file_size": 0
+    }
+  },
+  {
+    "id": "c9c559ff-6733-40d0-a2c1-7d3c7c0ba6a3",
+    "action_type": "upload",
+    "image_id": "d082e41e-0cf9-4adc-8a99-9a7e2283f7c6",
+    "coordinates": null,
+    "description": null,
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+    "ip_address": "127.0.0.1",
+    "timestamp": "2025-08-17T23:38:26.709773",
+    "metadata": {
+      "width": 625,
+      "height": 417,
+      "format": "Unknown",
+      "mode": "RGB",
+      "file_size": 0
+    }
+  },
+  {
+    "id": "b137d4b9-5e0b-446f-ab74-3fbae1e03d1c",
+    "action_type": "upload",
+    "image_id": "b06d9369-46bb-49f7-a316-864106a509a9",
+    "coordinates": null,
+    "description": null,
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+    "ip_address": "127.0.0.1",
+    "timestamp": "2025-08-17T23:42:31.647811",
+    "metadata": {
+      "width": 625,
+      "height": 417,
+      "format": "Unknown",
+      "mode": "RGB",
+      "file_size": 0
+    }
+  },
+  {
+    "id": "87519ca1-f345-4a06-bf0d-aa60e60b77a5",
+    "action_type": "upload",
+    "image_id": "82960a05-a21f-451c-b6b2-0a8a1fd5eeed",
+    "coordinates": null,
+    "description": null,
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+    "ip_address": "127.0.0.1",
+    "timestamp": "2025-08-17T23:43:41.470589",
+    "metadata": {
+      "width": 625,
+      "height": 417,
+      "format": "Unknown",
+      "mode": "RGB",
+      "file_size": 0
+    }
+  },
+  {
+    "id": "b6947241-2c93-44e7-af2f-e09b1d9f0899",
+    "action_type": "upload",
+    "image_id": "0f0add09-3fe2-47bb-8544-983f3a17d909",
+    "coordinates": null,
+    "description": null,
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+    "ip_address": "127.0.0.1",
+    "timestamp": "2025-08-17T23:47:39.456334",
+    "metadata": {
+      "width": 625,
+      "height": 417,
+      "format": "Unknown",
+      "mode": "RGB",
+      "file_size": 0
+    }
+  },
+  {
+    "id": "3dd058a4-1cfa-43a9-b5ea-e7bef7cbd2b4",
+    "action_type": "upload",
+    "image_id": "206b6115-d547-4ff1-85b5-33029bb23ee5",
+    "coordinates": null,
+    "description": null,
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+    "ip_address": "127.0.0.1",
+    "timestamp": "2025-08-17T23:47:52.590051",
+    "metadata": {
+      "width": 625,
+      "height": 417,
+      "format": "Unknown",
+      "mode": "RGB",
+      "file_size": 0
+    }
+  },
+  {
+    "id": "cec8875b-5246-4bdb-8ccc-29bc9db123e2",
+    "action_type": "upload",
+    "image_id": "ce67bb32-c149-4637-adfb-beaa024c0d9f",
+    "coordinates": null,
+    "description": null,
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+    "ip_address": "127.0.0.1",
+    "timestamp": "2025-08-17T23:58:06.100997",
+    "metadata": {
+      "width": 625,
+      "height": 417,
+      "format": "Unknown",
+      "mode": "RGB",
+      "file_size": 0
+    }
   }
 ]

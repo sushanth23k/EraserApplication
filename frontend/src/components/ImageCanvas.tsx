@@ -176,42 +176,65 @@ const ImageCanvas: React.FC<ImageCanvasProps> = ({
 
       case DrawingTool.RECTANGLE:
         if (shape.coordinates.length >= 2) {
-          const start = shape.coordinates[0];
-          const end = shape.coordinates[shape.coordinates.length - 1];
-          const x = Math.min(start.x, end.x);
-          const y = Math.min(start.y, end.y);
-          const width = Math.abs(end.x - start.x);
-          const height = Math.abs(end.y - start.y);
+          // Support both live-draw with 2 points and completed polygon with 4 points by using bounds
+          const xs = shape.coordinates.map(p => p.x);
+          const ys = shape.coordinates.map(p => p.y);
+          const minX = Math.min(...xs);
+          const minY = Math.min(...ys);
+          const maxX = Math.max(...xs);
+          const maxY = Math.max(...ys);
+          const width = maxX - minX;
+          const height = maxY - minY;
           
-          ctx.beginPath();
-          ctx.rect(Math.round(x) + 0.5, Math.round(y) + 0.5, Math.round(width), Math.round(height));
-          if (shape.isComplete) {
-            ctx.fill();
+          if (width > 0 && height > 0) {
+            ctx.beginPath();
+            ctx.rect(minX, minY, width, height);
+            if (shape.isComplete) {
+              ctx.fill();
+            }
+            ctx.setLineDash(shape.isComplete ? [] : [6 / viewport.scale, 4 / viewport.scale]);
+            ctx.stroke();
+            ctx.setLineDash([]);
           }
-          ctx.setLineDash(shape.isComplete ? [] : [6 / viewport.scale, 4 / viewport.scale]);
-          ctx.stroke();
-          ctx.setLineDash([]);
           ctx.shadowBlur = 0;
         }
         break;
 
       case DrawingTool.ELLIPSE:
         if (shape.coordinates.length >= 2) {
-          const start = shape.coordinates[0];
-          const end = shape.coordinates[shape.coordinates.length - 1];
-          const centerX = (start.x + end.x) / 2;
-          const centerY = (start.y + end.y) / 2;
-          const radiusX = Math.abs(end.x - start.x) / 2;
-          const radiusY = Math.abs(end.y - start.y) / 2;
-          
-          ctx.beginPath();
-          ctx.ellipse(centerX, centerY, radiusX, radiusY, 0, 0, 2 * Math.PI);
-          if (shape.isComplete) {
-            ctx.fill();
+          let centerX: number, centerY: number, radiusX: number, radiusY: number;
+          if (shape.coordinates.length > 2 || shape.isComplete) {
+            // Completed ellipse converted to polygon: derive bounds from all points
+            const xs = shape.coordinates.map(p => p.x);
+            const ys = shape.coordinates.map(p => p.y);
+            const minX = Math.min(...xs);
+            const minY = Math.min(...ys);
+            const maxX = Math.max(...xs);
+            const maxY = Math.max(...ys);
+            centerX = (minX + maxX) / 2;
+            centerY = (minY + maxY) / 2;
+            radiusX = (maxX - minX) / 2;
+            radiusY = (maxY - minY) / 2;
+          } else {
+            // Live preview with two points
+            const start = shape.coordinates[0];
+            const end = shape.coordinates[shape.coordinates.length - 1];
+            centerX = (start.x + end.x) / 2;
+            centerY = (start.y + end.y) / 2;
+            radiusX = Math.abs(end.x - start.x) / 2;
+            radiusY = Math.abs(end.y - start.y) / 2;
           }
-          ctx.setLineDash(shape.isComplete ? [] : [6 / viewport.scale, 4 / viewport.scale]);
-          ctx.stroke();
-          ctx.setLineDash([]);
+          
+          if (radiusX > 0 && radiusY > 0) {
+            ctx.beginPath();
+            ctx.ellipse(centerX, centerY, radiusX, radiusY, 0, 0, 2 * Math.PI);
+            if (shape.isComplete) {
+              ctx.fill();
+            }
+            ctx.setLineDash(shape.isComplete ? [] : [6 / viewport.scale, 4 / viewport.scale]);
+            ctx.stroke();
+            ctx.setLineDash([]);
+          }
           ctx.shadowBlur = 0;
         }
         break;
@@ -306,7 +329,12 @@ const ImageCanvas: React.FC<ImageCanvasProps> = ({
       
       case DrawingTool.RECTANGLE:
       case DrawingTool.ELLIPSE:
-        updatedCoordinates = [drawingState.startPoint, coord];
+        // For rectangles and ellipses, always update with start and current position
+        if (drawingState.startPoint) {
+          updatedCoordinates = [drawingState.startPoint, coord];
+        } else {
+          return;
+        }
         break;
       
       default:
